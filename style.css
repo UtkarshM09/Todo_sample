@@ -1,0 +1,139 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, #acf360 0%, #22ddf5 100%);
+}
+
+/*Others are to right/left/top*/
+
+.container .todoList {
+
+  overflow-y: hidden;
+}
+
+.container {
+  margin: 120px auto;
+  max-width: 400px;
+  width: 100%;
+  background-color:
+    rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 25px;
+}
+
+.container .header {
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.container .inputbox {
+  display: flex;
+  height: 45px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.inputbox input {
+  width: 85%;
+  height: 100%;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  border-radius: 3px;
+  padding-left: 15px;
+}
+
+.inputbox button {
+  margin-left: 5px;
+  width: 60px;
+  height: 100%;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  color: white;
+  opacity: 0.6;
+  pointer-events: auto;
+}
+
+.inputbox button.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.inputbox:hover button {
+  background-color: rgb(152, 69, 180);
+}
+
+/*
+button{
+  transition-property:background-color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.07s;
+}*/
+
+.container .todoList {
+  max-height: 250px;
+  overflow-y: auto;
+  /*To align items in a list with a specified height*/
+}
+
+.todoList li {
+  list-style-type: none;
+  height: 45px;
+  line-height: 40px;
+  margin-left: 5px;
+  margin-bottom: 8px;
+  position: relative;
+  background-color: rgb(234, 237, 241);
+  padding: 0 15px;
+  cursor: default;
+  overflow: hidden;
+  /*used in outer element*/
+}
+
+.todoList li span {
+  position: absolute;
+  right: -55px;
+  text-align: center;
+  color: white;
+  background: rgb(234, 55, 55);
+  width: 50px;
+  height: 45px;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.todoList li:hover span {
+  right: 0px;
+}
+
+.container .footer {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer button {
+  height: 30px;
+  width: 70px;
+  border: none;
+  color: white;
+  background-color: rgb(152, 69, 180);
+  padding: 2px 4px;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+}
